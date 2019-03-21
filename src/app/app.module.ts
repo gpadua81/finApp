@@ -5,18 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrdersService } from './shared/orders.service';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrdersComponent
+    OrdersComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule 
   ],
-  providers: [],
+  providers: [ OrdersService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
